@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+body, html{
+    margin:0;
+    width:1440px;
+    font-family: 'Inter';
+    overflow-x: hidden;
+}
+.container{
+    width:92%;
+    margin:0 auto;
+}
+.header-a{
+    text-decoration: none;
+    color:hsl(236, 13%, 42%);
+}
+.icon-menu,
+.icon-menu-close{
+    display:none;
+}
+li{
+    list-style: none;
+}
+.navbar{
+    padding-bottom:60px;
+    display:flex;
+    justify-content: space-between;
+    width:92%;
+    padding-top:60px;
+}
+nav ul{
+    display:flex;
+    justify-content: space-between;
+    gap:30px;
+
+}
+.body{
+    grid-template-columns: 53em 330px;
+    grid-template-rows: auto;
+    display:grid;
+    gap:40px;
+    grid-template-areas: 
+    "body  article"
+    "main  article";
+}
+.image-one{
+    width:53em;
+    grid-area:body;
+    height:400px
+}
+.article{
+    grid-area:article;
+    height:650px;
+    background-color: hsl(240, 100%, 5%);
+    margin:0 auto;
+    display:grid;
+    grid-template-rows: 100px auto auto auto;
+    grid-template-areas: 
+    "h1"
+    "article1"
+    "article2"
+    "article3"
+    ;
+}
+.main{
+    padding-top:10px;
+    margin-top:0px;
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 420px 400px;
+    grid-template-rows: 170px 30px;
+    column-gap:40px;
+    grid-template-areas: 
+    "Header Details"
+    "Header Button"
+    ;
+}
+.main h1{
+    padding-top:50px;
+    margin-bottom:40px;
+    grid-area: Header;
+    font-size: 4em;
+    font-weight:800;
+    line-height:70px;
+    align-self:center;
+}
+.main p{
+    grid-area:Details;
+    align-self:center;
+    line-height: 30px;
+    font-size:16px;
+    width:400px;
+    color:hsl(236, 13%, 42%);
+    text-align:left;
+}
+.main button{
+    align-self:start;
+    grid-area:Button;
+    width:200px;
+    padding:20px 20px;
+    color:#fff;
+    background-color: hsl(5, 85%, 63%);
+    text-transform: uppercase;
+    border:none;
+    letter-spacing: 2px;
+}
+.article h1{
+    font-size:40px;
+    color:hsl(35, 77%, 62%);
+    padding-left: 5%;
+}
+.article article{
+    width:90%;
+    margin:0 auto;
+}
+h3{
+    color:#fff;
+}
+article p{
+    color:hsl(236, 13%, 42%);
+}
+.article-one{
+    grid-area:article1;
+    align-self: start;
+    border-bottom: .8px solid #fff;
+}
+.article-two{
+    grid-area:article2;
+    padding-top:-20px;
+    align-self: center;
+    border-bottom: .8px solid #fff;
+}
+.article-three{
+    grid-area:article3;
+    align-self: start;
+}
+.footer{
+    padding-top:100px;
+    display:grid;
+    grid-template-columns: 120px 280px 120px 280px 120px 280px;
+    grid-template-rows:200px;
+    column-gap: 20px;
+    grid-template-areas: 
+    "retro text1 pc text2 game text3";
+    height:300px;
+    color:hsl(236, 13%, 42%);
+}
+.retro-image{
+    grid-area:retro;
+}
+.pc-image{
+    grid-area:pc;
+}
+.game-image{
+    grid-area:game;
+}
+.retro-text{
+    grid-area:text1; 
+    margin-bottom:5px;
+    margin-top:-17px;
+}
+.pc-text{
+    grid-area:text2;
+    
+    margin-bottom:5px;
+    margin-top:-17px;
+}
+.game-text{
+    grid-area:text3;
+    margin-bottom:5px;
+    margin-top:-17px;
+}
+.retro-image,
+.pc-image,
+.game-image{
+    width:120px;
+}
+.retro-text,
+.pc-text,
+.game-text{
+    width:239.7px;
+    align-self:start;
+    height:120px;
+}
+.retro-text p,
+.pc-text p,
+.game-text p{
+    font-size:15px;
+    margin-top:13px;
+}
+h2{
+    font-size:40px;
+    margin-top:11px;
+}
+.footer-article{
+    color:hsl(240, 100%, 5%);
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom:30px;
+    margin-top:10px;
+    text-decoration: none;
+}
+a, h3, button{
+    cursor:pointer;
+}
+button:hover{background-color:hsl(240, 100%, 5%);}
+a:hover{color:hsl(5, 85%, 63%);}
+h3:hover{color:hsl(35, 77%, 62%);}
+
+@media screen and (max-width: 768px){
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+    .container{
+      display:flex;
+      flex-direction:column;
+    }
+  .body{
+    display:flex;
+    flex-direction:column;
+  }
+  .main{
+        display:flex;
+        flex-direction: column;
+        height:800px;
+        width:100%;
+        align-content:flex-start;
+      justify-content:space-between;
+      margin-bottom:900px;
+  }
+    .main h1{
+      margin-top:20px;
+      font-size:10em;
+      line-height:200px;
+      padding-bottom:10px;
+      align-self:right;
+    }
+    .main p{
+      font-size:3.5em; 
+      align-self:right;
+      padding-bottom:60px;
+      line-height:120px;
+      width:94%;
+    }
+    .main button{
+        width:45%;
+        padding:70px 80px;
+        font-size:4em;
+    }
+    .nav {
+        overflow: hidden;
+        
+      }
+      
+    nav{
+        display:none;
+        background-color: #fff;
+        position:fixed;
+        width:70%;
+        height:100%;
+        top:0;
+        bottom:0;
+        right:0;
+        flex-direction:column;
+    }
+  .logo{
+      height:100px;
+    }
+  .navbar{
+      padding-top:60px;
+      margin-bottom:60px;
+      width:98%;
+    }
+    .icon-menu{
+        display:block;
+        height:90px;
+        width:170px;
+    }
+    .icon-menu-close{
+        height:90px;
+    }
+    .image-one{
+        margin:0 auto;
+        width:98%;
+        height:1000px;
+        object-fit:cover;
+    }
+    .article{
+        grid-area:article;
+        height:650px;
+        background-color: hsl(240, 100%, 5%);
+        margin:0 auto;
+        width:98%;
+        margin:0 auto;
+        align-content:center;
+        height:2300px;
+        display:grid;
+        grid-template-rows: 300px auto auto auto;
+        grid-template-areas: 
+        "h1"
+        "article1"
+        "article2"
+        "article3"
+        ;
+    }
+    .article-one{
+        grid-area:article1;
+        padding-top:120px;
+        align-self: start;
+        border-bottom: 2px solid #fff;
+    }
+    .article-two{
+        grid-area:article2;
+        padding-top:120px;
+        align-self: center;
+        border-bottom: 2px solid #fff;
+    }
+    .article-three{
+        grid-area:article3;
+        align-self: start;
+        padding-top:120px;
+    }
+    h3{
+      font-size:4em;
+    }
+    .article h1{
+      font-size:140px;
+      color:hsl(35, 77%, 62%);
+      padding-left: 5%;
+      align-self:start;
+    }
+    .article p{
+      font-size:4em;
+      font-weight:400;
+    }
+    .footer{
+      height:2000px;
+      width:98%;
+      padding-bottom:100px;
+      display:grid;
+      grid-template-columns:auto auto;
+      grid-template-rows:400px 400px 400px;
+      row-gap:260px;
+      column-gap:100px;
+      grid-template-areas:
+        "retro text1 "
+        "pc text2"
+        "game text3";
+    }
+    .retro-image{
+        grid-area:retro;
+    }
+    .pc-image{
+        grid-area:pc;
+    }
+    .game-image{
+        grid-area:game;
+    }
+    .retro-text{
+        grid-area:text1; 
+        margin-bottom:5px;
+        margin-top:-17px;
+    }
+    .pc-text{
+        grid-area:text2;
+        
+        margin-bottom:5px;
+        margin-top:-17px;
+    }
+    .game-text{
+        grid-area:text3;
+        margin-bottom:5px;
+        margin-top:-17px;
+    }
+    .retro-image,
+    .pc-image,
+    .game-image{
+      width:26em;
+    }
+    .attribution{
+      position:fixed;
+      bottom:0;
+    }
+    .retro-text,
+    .pc-text,
+    .game-text{
+      width:100%;
+      align-self:start;
+      height:120px;
+    }
+    .retro-text p,
+    .pc-text p,
+    .game-text p{
+      font-size:3.2em;
+      margin-top:13px;
+      margin-top:60px;
+      line-height:80px;
+    }
+    h2{
+      font-size:7em;
+      margin-top:11px;
+      margin-bottom:60px;
+    }
+    .footer-article{
+      color:hsl(240, 100%, 5%);
+      font-weight: 700;
+      font-size: 4em;
+      margin-bottom:30px;
+      margin-top:60px;
+      text-decoration: none;
+    }
+}
